@@ -1,72 +1,35 @@
 
-void setup()
-{
-	size(300,300);
-	background(0,255,0);
-	noLoop();
-}
-void draw()
-{
-	background(150);
-
-	
-}
-void mousePressed()
-{
-	redraw();
-}
-class Die //models one single dice cube
-{
-	//variable declarations here
-	boolean one;
-	boolean two;
-	boolean three;
-	boolean four; 
-	boolean five;
-	boolean six; 
-	int myX, myY;
-
-	Die(int x, int y) //constructor
+ void setup()
 	{
-		//variable initializations here
-		myX = x;
-		myY = y;
-		roll();
+	    size(600,600);
+	    noLoop();
 	}
-
-	void roll()
+	void draw()
 	{
-		//your code here
-		if((int)Math.random()*6 == 0){
-			one=true;
-		}else if((int)Math.random()*6 == 1){
-			two=true;
-		}else if((int)Math.random()*6 == 2){
-			three=true;
-		}else if((int)Math.random()*6 == 3){
-			four=true;
-		}else if((int)Math.random()*6 == 4){
-			five=true;
-		}else{
-			six=true;
-		}
+	    background(5);
+	    Die one = new Die(100,100);
+	    one.show();
 	}
-	void show()
+	void mousePressed()
 	{
-		fill(255);
-		rect(myX,myY,10,10);
-		if(one=true){
-			text("1", myX, myY);
-		}else if(two=true){
-			text("2", myX, myY);
-		}else if(three=true){
-			text("3", myX, myY);
-		}else if(four=true){
-			text("4", myX, myY);
-		}else if(five=true){
-			text("5", myX, myY);
-		}else{
-			text("6", myX, myY);
-		}
+	    redraw();
 	}
-}
+	class Die //models one single dice cube
+	{
+	    int myX, myY;
+	    
+	    Die(int x, int y) //constructor
+	    {
+	    	myX = x;
+   			myY = y;
+	        
+	    }
+	    void roll()
+	    {
+	        //your code here
+	    }
+	    void show()
+	    {
+	        rect(myX, myY, 50, 50, 5);
+	    }
+	}

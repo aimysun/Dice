@@ -6,9 +6,14 @@
 	}
 	void draw()
 	{
-	    background(5);
-	    Die one = new Die(100,100);
-	    one.show();
+	    background(10);
+	    for(int y = 10; y <= 550; y +=65){
+    		for(int x = 10 ; x <= 550; x +=65){
+     			Die one = new Die(x, y);
+	    		one.show();
+    		}
+  		}
+	     
 	}
 	void mousePressed()
 	{
@@ -30,6 +35,6 @@
 	    }
 	    void show()
 	    {
-	        rect(myX, myY, 50, 50, 5);
+	        rect(myX, myY, 55, 55, 5);
 	    }
 	}

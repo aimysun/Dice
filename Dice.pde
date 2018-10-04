@@ -39,7 +39,7 @@
 	    void roll()
 	    {
 	        numDots = (int)(Math.random()*6+1);
-	        fill(0);
+	        fill(random(255), random(255), random(255));
 	        if(numDots == 1){
 	        	ellipse(myX + 25, myY + 25, 10, 10);
 	        }else if(numDots == 2){
